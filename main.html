@@ -5,19 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FB Login Page</title>
   </head>
-  <!-- prettier-ignore -->
   <body>
-    <h1 id="logo">facebook</h1>
+    <h1 id="logo" class="left-img">facebook</h1>
     <p class="desc">Facebook helps you connect and share with the people in your life.</p>
     <form method="POST">
-      <fieldset>
-        <legend>FB Login</legend>
-        <input type="text" class="email-phone" placeholder="Email address or phone number">
-        <input type="password" name="password" id="password">
-        <button>Log in</button>
-        <a href="https://www.facebook.com">Forgotten account?</a>
-        <button>Create new account</button>
-      </fieldset>
+      <input type="text" id="email" placeholder="Email address or phone number" />
+      <input type="password" name="password" id="password" />
+      <button class="signup">Log in</button>
+      <a href="/recover/initiate">Forgotten account?</a>
+      <button>Create new account</button>
     </form>
   </body>
 </html>

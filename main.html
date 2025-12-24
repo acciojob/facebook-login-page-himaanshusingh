@@ -6,7 +6,7 @@
     <title>FB Login Page</title>
   </head>
   <body>
-    <h1 id="logo" class="left img">facebook</h1>
+    <h1 id="logo" class="left"><img src="facebook-logo.png" alt="facebook logo" /></h1>
     <p class="desc">Facebook helps you connect and share with the people in your life.</p>
     <form method="POST">
       <input type="text" id="email" placeholder="Email address or phone number" />
@@ -15,5 +15,12 @@
       <a href="/recover/initiate">Forgotten account?</a>
       <button>Create new account</button>
     </form>
+    <script>
+      const signUp = document.querySelector(".signup");
+      signUp.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.href = "/reg/";
+      });
+    </script>
   </body>
 </html>

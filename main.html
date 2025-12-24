@@ -1,26 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FB Login Page</title>
-  </head>
-  <body>
-    <h1 id="logo" class="left"><img src="facebook-logo.png" alt="facebook logo" /></h1>
-    <p class="desc">Facebook helps you connect and share with the people in your life.</p>
-    <form method="POST">
-      <input type="text" id="email" placeholder="Email address or phone number" />
-      <input type="password" name="password" id="password" placeholder="Password" />
-      <button class="signup">Log in</button>
-      <a href="/recover/initiate">Forgotten account?</a>
-      <button>Create new account</button>
-    </form>
-    <script>
-      const signUp = document.querySelector(".signup");
-      signUp.addEventListener("click", function (e) {
-        e.preventDefault();
-        window.location.href = "/reg/";
-      });
-    </script>
-  </body>
+
+<html>
+
+<head>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	  <div class="container">
+    <div class="left">
+		  <img 
+    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 216 216'%3E%3Cpath fill='%231877F2' d='M204.1 0H11.9C5.3 0 0 5.3 0 11.9v192.2C0 210.7 5.3 216 11.9 216h103.3V132H89.7v-31.3h25.5V77.6c0-25.3 15.4-39.1 38-39.1 10.8 0 20.1.8 22.8 1.2v26.4h-15.6c-12.3 0-14.7 5.8-14.7 14.4v18.9h29.4L171.2 132h-26.2v84h51.1c6.6 0 11.9-5.3 11.9-11.9V11.9C216 5.3 210.7 0 204.1 0z'/%3E%3C/svg%3E"
+    alt="Facebook Logo"
+  >
+		<p>Facebook helps you connect and share with the people in your life.</p>
+    </div>
+
+    <div class="right">
+      <div class="login-box">
+        <form>
+          <input id="email" type="text" placeholder="Email address or phone number" required />
+          <input id="password" type="password" placeholder="Password" required />
+          <button type="submit" class="login">Log in</button>
+        </form>
+
+        <div class="forgot">
+          <a href="/recover/initiate">Forgotten account?</a>
+        </div>
+        <hr />
+        <button class="signup create-account" onclick="window.location.href='/reg/'">
+          Create new account
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <a href="#">Create a Page</a> for a celebrity, brand or business.
+  </div>
+    <script type="text/javascript" src="./script.js">
+</script>
+
+</body>
+
 </html>
